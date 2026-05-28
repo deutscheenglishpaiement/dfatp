@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Centres — DFATP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .centre-card { background: white; border-radius: 20px; border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); margin-bottom: 2rem; }
+    .centre-card:hover { box-shadow: var(--shadow-md); }
+    .centre-card-inner { display: grid; grid-template-columns: 1fr 2fr; }
+    .centre-card-left { background: linear-gradient(135deg, #1A1A1A, #2C2C2C); padding: 2rem; color: white; }
+    .centre-code { font-size: 0.7rem; font-family: monospace; background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; color: rgba(255,255,255,0.6); }
+    .centre-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .centre-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 1.5rem; }
+    .centre-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .centre-stat { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 0.875rem; text-align: center; }
+    .centre-stat-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+    .centre-stat-lbl { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .centre-card-right { padding: 2rem; }
+    .centre-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+    .centre-info-item label { font-size: 0.7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px; }
+    .centre-info-item span  { font-size: 0.9rem; font-weight: 500; color: var(--dark); }
+    .centre-badge-active   { background: #D1FAE5; color: #065F46; border-color: #A7F3D0; }
+    .centre-badge-inactive { background: #FEE2E2; color: #991B1B; border-color: #FECACA; }
+    @media (max-width: 768px) { .centre-card-inner { grid-template-columns: 1fr; } .centre-info-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div><div class="navbar-logo-text">DFA<span>TP</span></div><div class="navbar-logo-sub">Deutsch Für Alle Training Platform</div></div>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="centres.html" class="active">Centres</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">S'inscrire</a>
+      </div>
+      <button class="navbar-burger" id="burger"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="centres.html">Centres</a></li><li><a href="formations.html">Formations</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="mobile-menu-actions"><a href="contact.html" class="btn btn-primary btn-full">S'inscrire</a></div>
+</div>
+
+<section class="page-header">
+  <div class="container">
+    <span class="badge">Implantation</span>
+    <h1>Nos <span style="color:var(--primary)">centres</span> de formation</h1>
+    <p>Des centres modernes et équipés dans plusieurs villes. Trouvez le centre le plus proche de chez vous.</p>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="container">
+    <!-- Centres statiques - à remplacer par vos vrais centres -->
+    <div class="centre-card">
+      <div class="centre-card-inner">
+        <div class="centre-card-left">
+          <div class="centre-code">#CLV</div>
+          <div class="centre-name">Centre de CALAVI</div>
+          <div class="centre-desc">Notre centre principal, équipé de salles modernes, d'une bibliothèque et d'un espace numérique dédié.</div>
+          <div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(22,163,74,0.2);color:#4ADE80;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem">● Actif</div>
+          <div class="centre-stats">
+            <div class="centre-stat"><div class="centre-stat-val">210+</div><div class="centre-stat-lbl">Étudiants</div></div>
+            <div class="centre-stat"><div class="centre-stat-val">3+</div><div class="centre-stat-lbl">Admins</div></div>
+          </div>
+        </div>
+        <div class="centre-card-right">
+          <div class="centre-info-grid">
+            <div class="centre-info-item"><label>Ville</label><span>Calavi</span></div>
+            <div class="centre-info-item"><label>Téléphone</label><span>+229 01 41 67 55 95</span></div>
+            <div class="centre-info-item"><label>Email</label><span>calavi@dfatp.com</span></div>
+            <div class="centre-info-item"><label>Horaires</label><span>Lun–Sam : 8h–20h</span></div>
+            <div class="centre-info-item" style="grid-column:span 2"><label>Adresse</label><span>        </span></div>
+          </div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary btn-sm">S'inscrire dans ce centre →</a>
+            <a href="formations.html" class="btn btn-ghost btn-sm">Voir les formations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="centre-card">
+      <div class="centre-card-inner">
+        <div class="centre-card-left" style="background:linear-gradient(135deg,#1E3A5F,#2563EB)">
+          <div class="centre-code">#PNV</div>
+          <div class="centre-name">Centre de Porto-Novo</div>
+          <div class="centre-desc">Centre dynamique au cœur de la capitale administrative, idéalement situé pour les professionnels.</div>
+          <div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(22,163,74,0.2);color:#4ADE80;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem">● Actif</div>
+          <div class="centre-stats">
+            <div class="centre-stat"><div class="centre-stat-val">145+</div><div class="centre-stat-lbl">Étudiants</div></div>
+            <div class="centre-stat"><div class="centre-stat-val">2+</div><div class="centre-stat-lbl">Admins</div></div>
+          </div>
+        </div>
+        <div class="centre-card-right">
+          <div class="centre-info-grid">
+            <div class="centre-info-item"><label>Ville</label><span>Porto-Novo</span></div>
+            <div class="centre-info-item"><label>Téléphone</label><span>+229 01 41 67 55 95</span></div>
+            <div class="centre-info-item"><label>Email</label><span>porto-novo@efams.com</span></div>
+            <div class="centre-info-item"><label>Horaires</label><span>Lun–Sam : 8h–19h</span></div>
+            <div class="centre-info-item" style="grid-column:span 2"><label>Adresse</label><span>         </span></div>
+          </div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary btn-sm">S'inscrire dans ce centre →</a>
+            <a href="formations.html" class="btn btn-ghost btn-sm">Voir les formations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="centre-card">
+      <div class="centre-card-inner">
+        <div class="centre-card-left" style="background:linear-gradient(135deg,#14532D,#16A34A)">
+          <div class="centre-code">#PKU</div>
+          <div class="centre-name">Centre de Parakou</div>
+          <div class="centre-desc">Premier centre de formation linguistique de qualité dans le nord du Bénin.</div>
+          <div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(22,163,74,0.2);color:#4ADE80;padding:0.3rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem">● Actif</div>
+          <div class="centre-stats">
+            <div class="centre-stat"><div class="centre-stat-val">98+</div><div class="centre-stat-lbl">Étudiants</div></div>
+            <div class="centre-stat"><div class="centre-stat-val">2+</div><div class="centre-stat-lbl">Admins</div></div>
+          </div>
+        </div>
+        <div class="centre-card-right">
+          <div class="centre-info-grid">
+            <div class="centre-info-item"><label>Ville</label><span>Parakou</span></div>
+            <div class="centre-info-item"><label>Téléphone</label><span>+229 01 41 67 55 95</span></div>
+            <div class="centre-info-item"><label>Email</label><span>parakou@efams.com</span></div>
+            <div class="centre-info-item"><label>Horaires</label><span>Lun–Sam : 8h–19h</span></div>
+            <div class="centre-info-item" style="grid-column:span 2"><label>Adresse</label><span>         </span></div>
+          </div>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary btn-sm">S'inscrire dans ce centre →</a>
+            <a href="formations.html" class="btn btn-ghost btn-sm">Voir les formations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pas de centre près de vous -->
+    <div style="text-align:center;padding:3rem;background:white;border-radius:20px;border:2px dashed var(--border)">
+      <div style="font-size:2.5rem;margin-bottom:1rem">💻</div>
+      <h3 style="font-family:var(--font-display);margin-bottom:0.75rem">Pas de centre près de chez vous ?</h3>
+      <p style="max-width:500px;margin:0 auto 1.5rem">Nos formations en ligne sont disponibles partout. Apprenez depuis chez vous avec la même qualité pédagogique.</p>
+      <a href="formations.html" class="btn btn-primary">Voir les formations en ligne →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="navbar-logo-icon">DFA</div>
+          <div style="margin-left:0.625rem">
+            <div class="navbar-logo-text" style="color:white">DFA<span>TP</span></div>
+            <div class="navbar-logo-sub">Formation linguistique</div>
+          </div>
+        </a>
+        <p>Plateforme de formation linguistique.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">f</a>
+          <a href="https://wa.me/2290141675595" class="footer-social">wsp</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="centres.html">Centres</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <ul class="footer-links">
+          <li><a href="formations.html">Deutsch - English Général</a></li>
+          <li><a href="formations.html">Deutsch - English Professionnel</a></li>
+          <li><a href="formations.html">Préparation TOEFL</a></li>
+          <li><a href="formations.html">Ateliers Conversation</a></li>
+          <li><a href="formations.html">Formation En Ligne</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Cotonou, Bénin</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:+2290141675595" style="color:rgba(255,255,255,0.5)">+2290141675595</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:deutscheenglishpaiement@gmail.com" style="color:rgba(255,255,255,0.5)">deutscheenglishpaiement@gmail.com</a>
+        </div>
+        <div class="footer-promo">
+          <p>🎉 <strong>10% de réduction</strong><br>Sur les premières inscriptions</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DFATP. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">Confidentialité</a>
+        <a href="about.html">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar')
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20))
+  document.getElementById('burger').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'))
+</script>
+</body>
+</html>

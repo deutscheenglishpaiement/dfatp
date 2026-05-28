@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations — DFATP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .fcard { background:white; border-radius:20px; border:1px solid var(--border); overflow:hidden; display:flex; flex-direction:column; transition:var(--transition); }
+    .fcard:hover { box-shadow:var(--shadow-md); transform:translateY(-4px); }
+    .fcard-top { padding:2rem; }
+    .fcard-body { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+    .fcard-infos { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin-bottom:1.25rem; }
+    .fcard-info { background:var(--surface); border-radius:8px; padding:0.625rem; text-align:center; }
+    .fcard-info-icon { font-size:0.85rem; margin-bottom:2px; }
+    .fcard-info-val  { font-size:0.75rem; font-weight:600; color:var(--dark); }
+    .fcard-features  { list-style:none; flex:1; margin-bottom:1.25rem; }
+    .fcard-features li { font-size:0.82rem; color:var(--muted); padding:0.3rem 0; display:flex; align-items:center; gap:0.5rem; }
+    .fcard-features li::before { content:'✓'; color:var(--primary); font-weight:700; }
+    .fcard-price { font-size:0.85rem; font-weight:700; color:var(--primary); margin-bottom:1rem; }
+    .niveau-pill { display:inline-block; padding:0.3rem 0.875rem; border-radius:20px; font-size:0.75rem; font-weight:600; background:var(--surface); color:var(--dark); border:1px solid var(--border); margin:0.2rem; }
+    .faq-item { border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; margin-bottom:0.75rem; }
+    .faq-q { padding:1rem 1.25rem; font-weight:600; font-size:0.9rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:white; }
+    .faq-q:hover { background:var(--surface); }
+    .faq-a { padding:0 1.25rem 1rem; font-size:0.875rem; color:var(--muted); display:none; }
+    .faq-item.open .faq-a { display:block; }
+    .faq-item.open .faq-arrow { transform:rotate(180deg); }
+    .faq-arrow { transition:transform 0.2s; font-size:0.75rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo"><div class="navbar-logo-icon">DFA</div><div><div class="navbar-logo-text">DFA<span>TP</span></div><div class="navbar-logo-sub">Deutsch Für Alle Training Platform</div></div></a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="centres.html">Centres</a></li><li><a href="formations.html" class="active">Formations</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-actions"><a href="contact.html" class="btn btn-primary btn-sm">S'inscrire</a></div>
+      <button class="navbar-burger" id="burger"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="centres.html">Centres</a></li><li><a href="formations.html">Formations</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="mobile-menu-actions"><a href="contact.html" class="btn btn-primary btn-full">S'inscrire</a></div>
+</div>
+
+<section class="page-header">
+  <div class="container">
+    <span class="badge">Nos programmes</span>
+    <h1>Choisissez votre <span style="color:var(--secondary)">formation</span></h1>
+    <p>6 programmes conçus pour répondre à tous les objectifs. Niveaux A0 à C1, formats flexibles, paiement fractionné disponible.</p>
+  </div>
+</section>
+
+<!-- Niveaux -->
+<section style="background:white;border-bottom:1px solid var(--border);padding:1.5rem 0">
+  <div class="container">
+    <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--muted);text-align:center;margin-bottom:0.875rem">Niveaux disponibles (CECRL)</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem">
+      <span class="niveau-pill">A0 — Débutant absolu</span>
+      <span class="niveau-pill">A1 — Débutant</span>
+      <span class="niveau-pill">A2 — Élémentaire</span>
+      <span class="niveau-pill">B1 — Intermédiaire</span>
+      <span class="niveau-pill">B2 — Inter. supérieur</span>
+      <span class="niveau-pill">C1 — Avancé</span>
+    </div>
+  </div>
+</section>
+
+<!-- Grille formations -->
+<section class="section bg-surface">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem">
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#E8391A,#C42E12)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🇬🇧</div>
+          <span style="background:rgba(255,255,255,0.2);color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">Populaire</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Deutsch - English Général</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Du niveau A0 au C1. Cours adaptés à votre rythme, en présentiel ou en ligne.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">3 mois</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">12 max</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">Hybride</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>A0 à C1 (CECRL)</li>
+            <li>Petits groupes</li>
+            <li>Matériel inclus</li>
+            <li>Attestation officielle</li>
+          </ul>
+          <div class="fcard-price">À partir de 50 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#1A1A1A,#2C2C2C)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">💼</div>
+          <span style="background:rgba(245,194,0,0.2);color:#F5C200;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">Business</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Deutsch - English Professionnel</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Maîtrisez l'anglais des affaires, de la médecine ou du droit.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">2 mois</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">10 max</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">Présentiel</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>Affaires & Finance</li>
+            <li>Médecine & Droit</li>
+            <li>Présentations pro</li>
+            <li>Certificat professionnel</li>
+          </ul>
+          <div class="fcard-price">À partir de 75 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#16A34A,#15803D)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🎓</div>
+          <span style="background:rgba(255,255,255,0.2);color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">Certifiant</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Préparation TOEFL / IELTS</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Préparez-vous efficacement aux certifications internationales.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">6 sem.</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">8 max</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">Hybride</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>TOEFL / IELTS / TOEIC</li>
+            <li>Examens blancs</li>
+            <li>Coaching individuel</li>
+            <li>Garantie résultat</li>
+          </ul>
+          <div class="fcard-price">À partir de 90 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#2563EB,#1D4ED8)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🗣️</div>
+          <span style="background:rgba(255,255,255,0.2);color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">Oral</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Ateliers Conversation</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Pratiquez l'oral avec des locuteurs natifs et gagnez en confiance.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">1 mois</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">12 max</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">Présentiel</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>Locuteurs natifs</li>
+            <li>Débats & échanges</li>
+            <li>Correction phonétique</li>
+            <li>Attestation</li>
+          </ul>
+          <div class="fcard-price">À partir de 35 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">💻</div>
+          <span style="background:rgba(255,255,255,0.2);color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">En ligne</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Formation 100% En Ligne</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Apprenez à votre rythme depuis chez vous via notre plateforme.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">Flexible</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">Illimité</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">En ligne</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>Via Zoom / LMS</li>
+            <li>Emploi du temps flexible</li>
+            <li>Supports téléchargeables</li>
+            <li>Chat avec le formateur</li>
+          </ul>
+          <div class="fcard-price">À partir de 30 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+      <div class="fcard">
+        <div class="fcard-top" style="background:linear-gradient(135deg,#D97706,#B45309)">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">🔀</div>
+          <span style="background:rgba(255,255,255,0.2);color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.7rem;font-weight:700">Hybride</span>
+          <h3 style="font-family:var(--font-display);color:white;margin-top:0.75rem;font-size:1.1rem">Formation Hybride</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin-top:0.5rem">Le meilleur des deux mondes : présentiel + distanciel combinés.</p>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-infos">
+            <div class="fcard-info"><div class="fcard-info-icon">⏱</div><div class="fcard-info-val">2 mois</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">👥</div><div class="fcard-info-val">10 max</div></div>
+            <div class="fcard-info"><div class="fcard-info-icon">🖥</div><div class="fcard-info-val">Hybride</div></div>
+          </div>
+          <ul class="fcard-features">
+            <li>Présentiel + En ligne</li>
+            <li>Flexibilité maximale</li>
+            <li>Suivi personnalisé</li>
+            <li>Certificat</li>
+          </ul>
+          <div class="fcard-price">À partir de 60 000 FCFA</div>
+          <a href="contact.html" class="btn btn-primary btn-full">S'inscrire →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-white">
+  <div class="container" style="max-width:720px">
+    <h2 style="text-align:center;margin-bottom:2.5rem">Questions fréquentes</h2>
+    <div class="faq-item">
+      <div class="faq-q">Peut-on payer en plusieurs fois ? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Oui, nous proposons un paiement en 2 ou 3 fois pour toutes nos formations. Contactez votre centre pour plus d'informations.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Les cours sont-ils disponibles le week-end ? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Oui, des sessions du week-end sont disponibles dans tous nos centres. Les horaires varient selon les centres.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Quel niveau faut-il pour commencer ? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Aucun prérequis. Nous accueillons les débutants absolus (A0) et réalisons un test de niveau gratuit à l'inscription.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Les attestations sont-elles reconnues ? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Oui, nos attestations sont reconnues par les employeurs et institutions partenaires au Bénin et en Afrique de l'Ouest.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container" style="position:relative">
+    <h2>Prêt à vous lancer ?</h2>
+    <p>Inscrivez-vous dès maintenant et bénéficiez des 10% de réduction sur les premières inscriptions.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold btn-lg">S'inscrire maintenant →</a>
+      <a href="centres.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,0.3);color:white">Trouver un centre</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="navbar-logo-icon">DFA</div>
+          <div style="margin-left:0.625rem">
+            <div class="navbar-logo-text" style="color:white">DFA<span>TP</span></div>
+            <div class="navbar-logo-sub">Formation linguistique</div>
+          </div>
+        </a>
+        <p>Plateforme de formation linguistique.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">f</a>
+          <a href="https://wa.me/2290141675595" class="footer-social">wsp</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="centres.html">Centres</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <ul class="footer-links">
+          <li><a href="formations.html">Deutsch - English Général</a></li>
+          <li><a href="formations.html">Deutsch - English Professionnel</a></li>
+          <li><a href="formations.html">Préparation TOEFL</a></li>
+          <li><a href="formations.html">Ateliers Conversation</a></li>
+          <li><a href="formations.html">Formation En Ligne</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Cotonou, Bénin</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:+2290141675595" style="color:rgba(255,255,255,0.5)">+2290141675595</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:deutscheenglishpaiement@gmail.com" style="color:rgba(255,255,255,0.5)">deutscheenglishpaiement@gmail.com</a>
+        </div>
+        <div class="footer-promo">
+          <p>🎉 <strong>10% de réduction</strong><br>Sur les premières inscriptions</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DFATP. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">Confidentialité</a>
+        <a href="about.html">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const navbar = document.getElementById('navbar')
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20))
+  document.getElementById('burger').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'))
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'))
+  })
+</script>
+</body>
+</html>

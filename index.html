@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DFATP — Plateforme Formation linguistique</title>
+  <meta name="description" content="Plateforme centralisée de gestion des centres de formation linguistique. Inscriptions, paiements, suivi académique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">DFA</div>
+        <div>
+          <div class="navbar-logo-text">DFA<span>TP</span></div>
+          <div class="navbar-logo-sub">Deutsch Für Alle Training Platform</div>
+        </div>
+      </a>
+
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="centres.html">Centres</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">S'inscrire</a>
+      </div>
+
+      <button class="navbar-burger" id="burger" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3"  width="20" height="2" rx="1"/>
+          <rect y="9"  width="20" height="2" rx="1"/>
+          <rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="centres.html">Centres</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-actions">
+    <a href="contact.html" class="btn btn-primary btn-full">S'inscrire</a>
+  </div>
+</div>
+
+<!-- ═══ HERO ═════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-grid"></div>
+  <div class="container" style="width:100%">
+    <div class="hero-content">
+      <div class="animate-fade-up">
+        <div class="hero-badge">
+          <span></span>
+         Willkommen -  Welcome 🖐️
+        </div>
+        <h1>DEUTSCH FÜR ALLE<br><span class="highlight">T'OUVRE LES PORTES DE L'ALLEMAGNE !</span></h1>
+        <p class="hero-desc">50 contrats d'Aupair disponibles pour vivre une expérience unique en Allemagne ! <br>Découvre une nouvelle culture, améliore ton allemand et profite d'une opportunité exceptionelle. 
+          <br> 
+          <ul style="color: rgba(241, 187, 8, 0.966);">
+            <li>✅ Hébergement et repas pris en charge;</li>
+            <li>✅ Argent de poche mensuel;</li>
+            <li>✅ Cours d'allemand offerts;</li>
+            <li>✅ Immersion totale dans une famille allemande;</li>
+            <li>Et bien plus ... !</li>
+          </ul> <br>
+        </p>
+        <div class="hero-actions">
+          <a href="formations.html" class="btn btn-primary btn-lg">
+            Découvrir nos formations
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,0.2);color:white">
+            Nous contacter
+          </a>
+        </div>
+        <div class="hero-social-proof">
+          <div class="hero-avatars">
+            <span style="background:white;color:#111">E</span>
+            <span style="background:#E8391A">F</span>
+            <span style="background:#F5C200;color:#111">A</span>
+            <span style="background:#2563EB">M</span>
+            <span style="background:#16A34A">S</span>
+          </div>
+          <div>
+            <div style="color:#F5C200;font-size:0.8rem">★★★★★</div>
+            <p class="hero-proof-text">500+ étudiants satisfaits</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card animate-fade-up delay-2">
+        <div class="hero-card-header">
+          <span class="hero-card-title">Formations populaires</span>
+          <span style="background:rgba(22,163,74,0.2);color:#4ADE80;font-size:0.7rem;padding:0.2rem 0.6rem;border-radius:20px;font-weight:600">● Live</span>
+        </div>
+        <div class="hero-bar-item">
+          <div class="hero-bar-label"><span>🇬🇧 Deutsch Général</span><span>78%</span></div>
+          <div class="hero-bar-track"><div class="hero-bar-fill" style="width:70%"></div></div>
+        </div>
+         <div class="hero-bar-item">
+          <div class="hero-bar-label"><span>🇬🇧 English Général</span><span>78%</span></div>
+          <div class="hero-bar-track"><div class="hero-bar-fill" style="width:78%"></div></div>
+        </div>
+        <div class="hero-bar-item">
+          <div class="hero-bar-label"><span>💼 Deutsch/English Pro</span><span>54%</span></div>
+          <div class="hero-bar-track"><div class="hero-bar-fill" style="width:54%"></div></div>
+        </div>
+
+        <div class="hero-mini-cards">
+          <div class="hero-mini-card">
+            <div class="hero-mini-val">88%</div>
+            <div class="hero-mini-label">Taux de satisfaction de nos Etudiants</div>
+          </div>
+          <div class="hero-mini-card">
+            <div class="hero-mini-val">3+</div>
+            <div class="hero-mini-label">Centres actifs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═════════════════════════════════════════════════ -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="text-center animate-fade-up">
+        <div class="stat-icon">👨‍🎓</div>
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Étudiants formés</div>
+      </div>
+      <div class="text-center animate-fade-up delay-1">
+        <div class="stat-icon">🏫</div>
+        <div class="stat-value">3+</div>
+        <div class="stat-label">Centres actifs</div>
+      </div>
+      <div class="text-center animate-fade-up delay-2">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-value">88%</div>
+        <div class="stat-label">Taux de satisfaction de nos Etudiants</div>
+      </div>
+      <div class="text-center animate-fade-up delay-3">
+        <div class="stat-icon">🌍</div>
+        <div class="stat-value">2+</div>
+        <div class="stat-label">Langues enseignées</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FORMATIONS ════════════════════════════════════════════ -->
+<section class="section bg-surface">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Nos programmes</span>
+      <h2>Des formations pour chaque <span class="accent">objectif</span></h2>
+      <p>Que vous soyez débutant ou confirmé, nous avons le programme adapté à vos besoins et votre emploi du temps.</p>
+    </div>
+    <div class="grid-4">
+      <div class="formation-card">
+        <div class="formation-card-top">
+          <div class="formation-emoji">🇬🇧</div>
+          <span class="formation-badge" style="background:#E8391A">Populaire</span>
+          <div class="formation-title">Deutsch - English Général</div>
+          <div class="formation-desc">Du niveau A0 au C1. Cours adaptés à votre rythme, en présentiel ou en ligne.</div>
+          <ul class="formation-features">
+            <li>A0 à C1 (CECRL)</li>
+            <li>Présentiel & En ligne</li>
+            <li>Petits groupes (12 max)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="formation-card">
+        <div class="formation-card-top">
+          <div class="formation-emoji">💼</div>
+          <span class="formation-badge" style="background:#F5C200;color:#111">Business</span>
+          <div class="formation-title">Deutsch - English Professionnel</div>
+          <div class="formation-desc">Maîtrisez l'anglais / l'allemand des affaires, de la médecine ou du droit.</div>
+          <ul class="formation-features">
+            <li>Affaires & Finance</li>
+            <li>Médecine & Droit</li>
+            <li>Présentations pro</li>
+          </ul>
+        </div>
+      </div>
+      <div class="formation-card">
+        <div class="formation-card-top">
+          <div class="formation-emoji">🎓</div>
+          <span class="formation-badge" style="background:#16A34A">Certifiant</span>
+          <div class="formation-title">Préparation aux Tests</div>
+          <div class="formation-desc">Préparez-vous aux certifications TOEFL, IELTS et TOEIC avec nos experts.</div>
+          <ul class="formation-features">
+            <li>TOEFL / IELTS / TOEIC</li>
+            <li>Examens blancs</li>
+            <li>Coaching individuel</li>
+          </ul>
+        </div>
+      </div>
+      <div class="formation-card">
+        <div class="formation-card-top">
+          <div class="formation-emoji">🗣️</div>
+          <span class="formation-badge" style="background:#2563EB">Oral</span>
+          <div class="formation-title">Ateliers Conversation</div>
+          <div class="formation-desc">Pratiquez l'oral avec des locuteurs natifs et gagnez en confiance.</div>
+          <ul class="formation-features">
+            <li>Locuteurs natifs</li>
+            <li>Débats & échanges</li>
+            <li>En groupe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="formations.html" class="btn btn-primary">
+        Voir toutes les formations
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AVANTAGES ════════════════════════════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="grid-2 gap-lg align-center">
+      <div>
+        <span class="badge badge-gold">Pourquoi nous choisir</span>
+        <h2 style="margin:1rem 0">Une expérience d'apprentissage <span class="accent">exceptionnelle</span></h2>
+        <p style="font-size:1.05rem;margin-bottom:2rem">Nos centres combinent méthodes modernes, formateurs qualifiés et outils digitaux pour vous offrir la meilleure expérience d'apprentissage.</p>
+        <a href="about.html" class="btn btn-primary">En savoir plus →</a>
+      </div>
+      <div class="grid-2" style="gap:1rem">
+        <div class="card card-body" style="border-radius:16px">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">🏆</div>
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:0.5rem">Certification reconnue</h4>
+          <p style="font-size:0.82rem">Attestations reconnues par les employeurs et institutions partenaires.</p>
+        </div>
+        <div class="card card-body" style="border-radius:16px">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">⚡</div>
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:0.5rem">Apprentissage accéléré</h4>
+          <p style="font-size:0.82rem">Méthodes modernes et immersives pour progresser rapidement.</p>
+        </div>
+        <div class="card card-body" style="border-radius:16px">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">👥</div>
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:0.5rem">Petits groupes</h4>
+          <p style="font-size:0.82rem">Maximum 12 étudiants par groupe pour un suivi personnalisé.</p>
+        </div>
+        <div class="card card-body" style="border-radius:16px">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">📱</div>
+          <h4 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:0.5rem">Suivi digital</h4>
+          <p style="font-size:0.82rem">Suivez votre progression en temps réel sur notre plateforme.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container" style="position:relative">
+    <h2>Prêt à commencer votre voyage linguistique ?</h2>
+    <p>Inscrivez-vous dès maintenant et bénéficiez des 10% de réduction sur les premières inscriptions.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold btn-lg">
+        S'inscrire maintenant →
+      </a>
+      <a href="centres.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,0.3);color:white">
+        Trouver un centre
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="navbar-logo-icon">DFA</div>
+          <div style="margin-left:0.625rem">
+            <div class="navbar-logo-text" style="color:white">DFA<span>TP</span></div>
+            <div class="navbar-logo-sub">Formation linguistique</div>
+          </div>
+        </a>
+        <p>Plateforme de formation linguistique.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">f</a>
+          <a href="https://wa.me/2290141675595" class="footer-social">wsp</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="centres.html">Centres</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <ul class="footer-links">
+          <li><a href="formations.html">Deutsch - English Général</a></li>
+          <li><a href="formations.html">Deutsch - English Professionnel</a></li>
+          <li><a href="formations.html">Préparation TOEFL</a></li>
+          <li><a href="formations.html">Ateliers Conversation</a></li>
+          <li><a href="formations.html">Formation En Ligne</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Cotonou, Bénin</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:+2290141675595" style="color:rgba(255,255,255,0.5)">+2290141675595</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:deutscheenglishpaiement@gmail.com" style="color:rgba(255,255,255,0.5)">deutscheenglishpaiement@gmail.com</a>
+        </div>
+        <div class="footer-promo">
+          <p>🎉 <strong>10% de réduction</strong><br>Sur les premières inscriptions</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DFATP. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">Confidentialité</a>
+        <a href="about.html">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar')
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20))
+
+  // Menu mobile
+  const burger     = document.getElementById('burger')
+  const mobileMenu = document.getElementById('mobileMenu')
+  burger.addEventListener('click', () => mobileMenu.classList.toggle('open'))
+  document.addEventListener('click', (e) => { if (!burger.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove('open') })
+</script>
+</body>
+</html>

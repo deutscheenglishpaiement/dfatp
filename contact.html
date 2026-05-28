@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Inscription — DFATP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
+    .contact-info-card { background: white; border-radius: 16px; border: 1px solid var(--border); padding: 1.5rem; display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; transition: var(--transition); text-decoration: none; color: inherit; }
+    .contact-info-card:hover { box-shadow: var(--shadow-md); border-color: var(--primary); }
+    .contact-info-icon { width: 44px; height: 44px; background: var(--primary-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-info-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+    .contact-info-val   { font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+    .promo-box { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 16px; padding: 1.5rem; color: white; margin-top: 1.5rem; }
+    .success-box { background: white; border-radius: 20px; border: 1px solid var(--border); padding: 3rem; text-align: center; }
+    .success-icon { width: 80px; height: 80px; background: #D1FAE5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo"><div class="navbar-logo-icon">EFA</div><div><div class="navbar-logo-text">DFA<span>TP</span></div><div class="navbar-logo-sub">Deutsch Für Alle Training Platform</div></div></a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="centres.html">Centres</a></li><li><a href="formations.html">Formations</a></li><li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="navbar-actions"><a href="contact.html" class="btn btn-primary btn-sm">S'inscrire</a></div>
+      <button class="navbar-burger" id="burger"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="centres.html">Centres</a></li><li><a href="formations.html">Formations</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="mobile-menu-actions"><a href="contact.html" class="btn btn-primary btn-full">S'inscrire</a></div>
+</div>
+
+<section class="page-header">
+  <div class="container">
+    <span class="badge">Inscription & Contact</span>
+    <h1>Commencez votre <span style="color:var(--secondary)">aventure linguistique</span></h1>
+    <p>Remplissez ce formulaire et notre équipe vous contactera dans les 24h pour finaliser votre inscription.</p>
+  </div>
+</section>
+
+<section class="section bg-surface">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Infos contact -->
+      <div>
+        <h3 style="font-family:var(--font-display);margin-bottom:1.5rem">Nous contacter</h3>
+
+        <a href="tel:+2290199037082" class="contact-info-card">
+          <div class="contact-info-icon">📞</div>
+          <div><div class="contact-info-label">Téléphone</div><div class="contact-info-val">+2290199037082</div></div>
+        </a>
+        <a href="mailto:nwg.sec.official@gmail.com" class="contact-info-card">
+          <div class="contact-info-icon">✉️</div>
+          <div><div class="contact-info-label">Email</div><div class="contact-info-val">nwg.sec.official@gmail.com</div></div>
+        </a>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📍</div>
+          <div><div class="contact-info-label">Siège</div><div class="contact-info-val">Cotonou, Bénin</div></div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">🕐</div>
+          <div><div class="contact-info-label">Horaires</div><div class="contact-info-val">Lun–Sam : 8h–20h</div></div>
+        </div>
+
+        <div class="promo-box">
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem">Offre spéciale</p>
+          <p style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:0.25rem">10% de réduction</p>
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.8)">Sur toute les premières inscriptions. Ne manquez pas cette offre !</p>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div>
+        <div id="successBox" class="success-box" style="display:none">
+          <div class="success-icon">✅</div>
+          <h3 style="font-family:var(--font-display);margin-bottom:0.75rem">Demande envoyée !</h3>
+          <p style="max-width:400px;margin:0 auto 1.5rem">Notre équipe vous contactera dans les 24h pour finaliser votre inscription.</p>
+          <button onclick="resetForm()" class="btn btn-primary">Envoyer une autre demande</button>
+        </div>
+
+        <form id="contactForm" style="background:white;border-radius:20px;border:1px solid var(--border);padding:2rem;box-shadow:var(--shadow-sm)">
+          <h3 style="font-family:var(--font-display);margin-bottom:1.5rem">Formulaire d'inscription</h3>
+          <div id="formError" class="alert alert-error" style="display:none"></div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Prénom <span class="required">*</span></label>
+              <input type="text" id="firstName" class="form-control" placeholder="Votre prénom" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nom <span class="required">*</span></label>
+              <input type="text" id="lastName" class="form-control" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone <span class="required">*</span></label>
+              <input type="tel" id="phone" class="form-control" placeholder="+229 97 00 00 00" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email (optionnel)</label>
+              <input type="email" id="email" class="form-control" placeholder="votre@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Centre souhaité <span class="required">*</span></label>
+              <select id="centre" class="form-control" required>
+                <option value="">Sélectionner un centre...</option>
+                <option>Centre de Cotonou</option>
+                <option>Centre de Porto-Novo</option>
+                <option>Centre de Parakou</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Formation souhaitée <span class="required">*</span></label>
+              <select id="formation" class="form-control" required>
+                <option value="">Sélectionner une formation...</option>
+                <option>Deutsch - English Général</option>
+                <option>Deutsch - English Professionnel</option>
+                <option>Préparation TOEFL / IELTS</option>
+                <option>Atelier de Conversation</option>
+                <option>Formation En Ligne</option>
+                <option>Formation Hybride</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Message (optionnel)</label>
+            <textarea id="message" class="form-control" rows="4" placeholder="Questions, précisions sur votre niveau actuel, disponibilités..."></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-full btn-lg">
+            ✉️ Envoyer ma demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top-accent"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="navbar-logo-icon">DFA</div>
+          <div style="margin-left:0.625rem">
+            <div class="navbar-logo-text" style="color:white">DFA<span>TP</span></div>
+            <div class="navbar-logo-sub">Formation linguistique</div>
+          </div>
+        </a>
+        <p>Plateforme de formation linguistique.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">f</a>
+          <a href="https://wa.me/2290141675595" class="footer-social">wsp</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="centres.html">Centres</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <ul class="footer-links">
+          <li><a href="formations.html">Deutsch - English Général</a></li>
+          <li><a href="formations.html">Deutsch - English Professionnel</a></li>
+          <li><a href="formations.html">Préparation TOEFL</a></li>
+          <li><a href="formations.html">Ateliers Conversation</a></li>
+          <li><a href="formations.html">Formation En Ligne</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Cotonou, Bénin</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <a href="tel:+2290141675595" style="color:rgba(255,255,255,0.5)">+2290141675595</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <a href="mailto:deutscheenglishpaiement@gmail.com" style="color:rgba(255,255,255,0.5)">deutscheenglishpaiement@gmail.com</a>
+        </div>
+        <div class="footer-promo">
+          <p>🎉 <strong>10% de réduction</strong><br>Sur les premières inscriptions</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DFATP. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">Confidentialité</a>
+        <a href="about.html">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Navbar
+  const navbar = document.getElementById('navbar')
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20))
+  document.getElementById('burger').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'))
+
+  // Formulaire
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const btn   = document.getElementById('submitBtn')
+    const error = document.getElementById('formError')
+    error.style.display = 'none'
+
+    const firstName = document.getElementById('firstName').value.trim()
+    const lastName  = document.getElementById('lastName').value.trim()
+    const phone     = document.getElementById('phone').value.trim()
+    const email     = document.getElementById('email').value.trim()
+    const centre    = document.getElementById('centre').value
+    const formation = document.getElementById('formation').value
+    const message   = document.getElementById('message').value.trim()
+
+    if (!firstName || !lastName || !phone || !centre || !formation) {
+      error.textContent    = 'Veuillez remplir tous les champs obligatoires.'
+      error.style.display  = 'flex'
+      return
+    }
+
+    btn.disabled    = true
+    btn.textContent = '⏳ Envoi en cours...'
+
+    // Construire le message WhatsApp
+const messageWhatsApp =
+`Nouvelle demande de formation :
+
+👤 Nom : ${firstName} ${lastName}
+📞 Téléphone : ${phone}
+📧 Email : ${email}
+🏫 Centre : ${centre}
+📚 Formation : ${formation}
+💬 Message : ${message || 'Aucun message'}`
+
+const numero = "2290141675595"
+
+// Générer le lien WhatsApp
+const url = `https://wa.me/${numero}?text=${encodeURIComponent(messageWhatsApp)}`
+
+// Ouvrir WhatsApp
+window.open(url, "_blank")
+
+// UI (optionnel)
+btn.disabled = false
+btn.textContent = '✉️ Envoyer ma demande'
+  })
+
+  function resetForm() {
+    document.getElementById('contactForm').reset()
+    document.getElementById('contactForm').style.display = 'block'
+    document.getElementById('successBox').style.display  = 'none'
+    document.getElementById('submitBtn').disabled    = false
+    document.getElementById('submitBtn').textContent = '✉️ Envoyer ma demande'
+  }
+</script>
+</body>
+</html>
